@@ -33,5 +33,4 @@ label = tkinter.Label(windy, text="홀드", width=30,
                       height=5, fg="blue", relief="solid")
 label.pack()
 
-
 windy.mainloop()
