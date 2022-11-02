@@ -58,4 +58,4 @@ if watter == "비":
 '''
 
 # for 반복문
-for wether in
+# for wether in
