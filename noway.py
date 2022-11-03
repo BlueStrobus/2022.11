@@ -55,7 +55,7 @@ print(
 watter = "비"
 if watter == "비":
     print("우산을 챙기세요")
-'''
+
 
 # for 반복문
 # for wether in
