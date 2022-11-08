@@ -1,7 +1,7 @@
-//객체 설정
+//
 const loginForm = document.getElementById("login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginButten = document.querySelector("#login-form rutten");
+const loginButten = document.querySelector("#login-form butten");
 
 function onLoginSubmit(event) {
     event.preventDefault(); //새로고침 막음
