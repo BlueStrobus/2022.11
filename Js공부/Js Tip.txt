@@ -21,3 +21,5 @@ vscode에서 작업 시 단축키 Ctrl + Shift + L 로 변수명 여러 개를 �
 
 
 
++ 대신  ${내용}
+'Hello ${username}';
