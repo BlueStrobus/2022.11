@@ -21,5 +21,18 @@ vscode에서 작업 시 단축키 Ctrl + Shift + L 로 변수명 여러 개를 �
 
 
 
-+ 대신  ${내용}
-'Hello ${username}';
++ 대신  `고정으로 나옴 ${변수??}`
+ `Hello ${username}`
+
+
+
+시계 만들기
+
+const hours = String(date.getHours()).padStart(2, "0"); 
+    //문자열로 바꿈, 문자열은 pad스타트 쓸 수 있음,
+    //(2, "0") 문자 길이가 2보다 작으면 앞에 0을 붙여라
+예시
+인풋    "k".padStart(5, "x")
+출력    'xxxxk'
+"l".padEnd(5,"Hi")
+'lHiHi'
