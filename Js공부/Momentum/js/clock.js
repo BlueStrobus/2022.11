@@ -10,7 +10,8 @@ function getClock(){
 }
 
 getClock();
-setInterval(getClock, 1000); // 1000 = 1초마다
+setInterval(getClock, 1000); // 1000ms(미리세컨드) = 1초마다
 
 
+//setTimeout 은 한번만 실핻하는 것
 //셋인터널 - 타이머,시간
