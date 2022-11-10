@@ -41,3 +41,31 @@ const hours = String(date.getHours()).padStart(2, "0");
 출력    'xxxxk'
 "l".padEnd(5,"Hi")
 'lHiHi'
+
+
+
+html 바꾸기  document.getElementById('hello').innerHTML = '안녕';
+
+ document.getElementById('X문서아이디X').x바꾸려는 것x = 'x바꿀 것x';
+웹문서  .   문서id로 요소 가져오기      .              =            ;
+
+내부 요소 바꾸기 : innerHTML
+색 바꾸기 : .style.color = 'red'   <- 색 영명으로 적어야 함
+여백 바꾸기 : 
+사이즈 바꾸기 : <- 구글링해서 찾기
+
+
+
+
+<body>
+    <h2 id="hello">안녕하세요</h2> h2는 글자 크기
+
+
+
+
+= 등호는 대입 오른쪽걸 왼쪽에 넣어주세요
+
+"문자"  '문자'
+
+
+document.getElementById('X문서아이디X').    <-셀렉터라고 부름
