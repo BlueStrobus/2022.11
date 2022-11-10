@@ -1,3 +1,6 @@
+웹 창에서 F12 누르고 Console에서 하는건 내 컴퓨터에서만 됨, 새로고침(F5)하면 원상복구됨
+
+
 주석처리 방법
 html : <!--내용-->
 Js : 한줄은 //로 시작,  한줄 이상은 /*내용*/
@@ -22,7 +25,9 @@ vscode에서 작업 시 단축키 Ctrl + Shift + L 로 변수명 여러 개를 �
 
 
 + 대신  `고정으로 나옴 ${변수??}`
+ 예시
  `Hello ${username}`
+ clock.innerText = `${hours}:${minutes}:${seconds}`;
 
 
 
