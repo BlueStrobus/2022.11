@@ -31,7 +31,7 @@ const authar = document.querySelector("#quotes span:last-child");
 
 console.log(Math.floor(Math.random() * quotes.length)); //floor은 소숫점 아래 버림
 const todayQuost = quotes[Math.floor(Math.random() * quotes.length)]
-
+ 
 
 quote.innerText = todayQuost.quote;
 authar.innerText = todayQuost.author;
