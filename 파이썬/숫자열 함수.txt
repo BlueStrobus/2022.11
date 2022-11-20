@@ -1,0 +1,112 @@
+숫자함수
+
+from random import *
+
+# random()비워두기
+print(random())  # 0.0~1.0 미만의 임의의 값 생성
+print(random()*50)  # 0.0~50.0 미만의 임의의 값 생성
+print(int(random()*50))  # 0~50 미만의 정수(int)인 임의의 값 생성
+
+
+print(int(random()*26)+1)  # 1~26이하의 임의의 정수 값 출력
+
+# randrange(a,b) a~b미만의 임의의 정수값 출력
+print(randrange(1, 54))
+print(randrange(10, 26))
+
+
+print(randint(1, 56))  # randint(a,b) a~b이하의 임의의 정수
+
+
+###################
+from random import *
+
+# random()비워두기
+print(random())  # 0.0~1.0 미만의 임의의 값 생성
+print(random()*50)  # 0.0~50.0 미만의 임의의 값 생성
+print(int(random()*50))  # 0~50 미만의 정수(int)인 임의의 값 생성
+
+
+print(int(random()*26)+1)  # 1~26이하의 임의의 정수 값 출력
+
+# randrange(a,b) a~b미만의 임의의 정수값 출력
+print(randrange(1, 54))
+print(randrange(10, 26))
+
+
+print(randint(1, 56))  # randint(a,b) a~b이하의 임의의 정수
+
+
+print(abs(-5))  # 절댔값 abs
+print(pow(3, 2))  # 거듭제곱 pow(a,b) a의 b제곱
+print(max(16, 2, 5.6, 7))  # 최댓값 max(__) ()안의 숫자 중 최댓값을 출력
+print(min(5, 1.22, 46))  # 최솟값
+print(round(4.5))  # 반올림  출력:4     1~5버림
+print(round(4.6)) #출력:5
+
+
+# 파이썬 매스함수 이용
+from math import *  # math 라이브러리 안의 함수를 사용, *잊지 말기
+print(floor(4.99))  # 소숫점 버림
+print(ceil(3.122))  # 올림(정수만들기)
+print(sqrt(16))  # 제곱근
+
+####################
+
+################################
+#파이썬에서 지수 표현
+#실수 숫자 뒤에 'e숫자'를 붙여 10*숫자를 나타냄(10의 거듭제곱)  (100은 e2,    0.01은 e-2)
+print(0.52273e2)  #출력 52.273
+#############################
+#연산에서 파이썬 연산 순서 1) 괄호 안의 식, 2) *, / ->+-, 3)왼쪽->오른쪽
+#연산 순서가 확실해도 가독성을 위해 괄호쳐주면 좋음
+#함수 안쓰는 사칙연산
+print("5 + 7 =", 5 + 7) #표시할 식(문장)은 앞 뒤로 따음표 붙이고 계산 식은 콤마찟소 바로 적기  출력 : 5 + 7 = 12
+# +, -, *, /
+# / 두 값을 나눈 결과를 반환(실수 값)
+# // 두 값을 나눈 결과의 몫의 반환(정수 값)
+# % 두 값을 나눈 결과의 나머지 반환
+# ** 거듭 제곱의 결과 반환 (ex)2**3 = 8)
+
+#정수나누기 연산자(소숫점 아랫부분 버림)  // 나누기 기호 2번 사용
+print('5//2=',5//2) #출력 2
+
+#나머지 연산자 : 나머지만 구함 %
+print("5%2=", 5%2) #출력 1
+
+#문자열 연산자도 숫자연산자외 같이 괄호내부 -> *,/ ->왼쪽부터 순서로 처리함
+print("안녕"+"하세요"*3)  #출력 안녕하세요하세요하세요
+##################################################
+output_a = str(52)
+output_b = str(52.273)
+print(type(output_a), output_a)
+print(type(output_b), output_b)
+
+
+#예제 : inch->cm
+
+ChangeInch = input("인치 단위의 숫자를 입력하세요 >") #숫자입력 요청(인치)
+
+inch = int(ChangeInch)  #인치는 위에 입력한 숫자
+cm = inch * 2.54  
+
+print(inch, "inch는 cm단위로", cm, "cm입니다.")
+# ** = () 에서 **는 아무거나 임의로 설정 가능   ',' 꼭 찍기
+
+#########################
+#일정 범위 내 연속된 수 출력
+from random import *
+user = range(1, 21)
+user = list(user)
+print(user) #정수로 출력됨
+#######################
+
+#랜덤 범위 내 숫자 뽑기 1)
+from random import randint #랜덤인트(정수만 뽑으) 불러오기
+wait = randint(5, 51)  #5와 50 사이의 수를 랜덤으로 하나 출력
+
+
+#랜덤 범위 내 숫자 뽑기 2)
+form random import *
+time = randeangs(5,51)
+###########################

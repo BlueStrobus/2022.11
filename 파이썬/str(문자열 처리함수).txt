@@ -1,0 +1,305 @@
+# 문자열 처리함수
+# 대문자, 소문자
+python = "Amaging Spyderman Is Wounderfull"
+print(python.lower())  # 모두 소문자
+print(python.upper())  # 보두 대문자
+print(python[0].isupper())  # 대문자인지 아닌지룰 진실/거짓을 ㅗ표현
+print(len(python))  # 길이(글자수)
+# a.replace("b", "c"") 리스트(?) a의 b를 c로 교채해서 츨력
+print(python.replace("Spyderman", "Batman"))
+##########################################################
+#이스케이프 문자(escape character)
+\" 큰 따음표 
+\' 작은 따음표
+\n 줄 바꿈
+\t 탭(tab)
+\\ 역슬래시 2개는 역슬래시(\)를 의미
+    print("\\ \\ \\")
+    #  출력 : \ \ \ \
+########
+
+# print('''\enter쓰는 여러줄 내용 \''')
+'''
+
+#따음표3개랑 역슬래시사용하면 의도치 않은 줄바꿈 방지
+
+print("이번에는 '\n' 이용해서\n근데 들여쓰기 아니면\n역슬래시엔 앞뒤로\n띄워쓰기 안함")
+#\n은 따음표 안에 넣어도 일하네...ㅎ
+#####################
+
+#문장연결, 문장열 반복 연산자
+print("안녕"+"하세요") #문장 사이에 + 넣기. 문장은 앞 뒤로 따음표 넣어서 문장인걸 표시해야 함
+print(5* "안녕!!! ")
+print("안녕"*5)   # (숫자* "문장") or ("문장"*숫자)   문장을 n회 반복 
+
+#################
+요소 위치 찾기+ 몇번
+index = python.index("m")  # 요소중에 첫번째 "m" 위치 출력
+print(index)
+# ~, index+1 <- 두번쩨 "m" 위치찾기  (for함수로 다 출력되게하는방법 찾기)
+index = python.index("m", index+1)
+print(index)
+
+print(python.find("java")) # 없으면 -1 출력됨
+
+# 찾는 문자가 없을 때 : find()는 '-1'(프로그램 계속 진해) 	index()는 오류를 띄움(프로그램 멈춤)
+
+print(python.count("m")) # m이  몇번 나오는지 찾아줌
+##########################
+
+#괄호 안에 입력한 자료의 유형
+ #(type("문자"))
+print(type("안녕"))
+#(type(정수나 실수))
+print(type(152.56)) #출력 float 실수(소숫점이 움직일 수 있는 '부동 소수점")
+print(type(16)) #출력 int 정수
+
+###########
+Amili = [1, 5, 3, 8, 8, 8, 7, 9]
+print(*Amili)   #출력: 5 3 8 8 8 7 9
+print(Amili)    #출력: [1, 5, 3, 8, 8, 8, 7, 9]
+
+
+#저장은 ctrl+s, 실행은 F5
+#################################################
+# 문자 이어쓰기 : + ,
+# 방법 1:  %로 삽입 #콤마없이 바로 %쓰고 삽입할 요소 적기
+# 문자열 중에 %d는 정수 넣음
+# 문자열 중에 %c는 문자1개 넣음
+# 문자열 중에 %s는 문자를 넣음(%d, %c대신 사용 가능)
+print("나는 젤리 %d개를 먹었다" % 23) #정수
+print("이번엔 문자를 쓸거야 %s" % "문자!!") #문자
+print("Apple은 %c로 시작해요." % "A")  # %c는 캐릭터, 문자 하나만 삽입
+print("나는 %s색과 %s색을 좋아해." % ('초록', '백'))
+###############
+#  "__{}__".format()  ->문장 내 {}에 삽입, 순서대로 적기
+print("나는 {}살입니다.".format(2437))
+# 나는 2437살입니다.
+print("나는 {1}색과 {0}색을 좋아해.".format('초록', '백'))  # {위치}로 요소 순서 바꾸기 가능
+# 나는 백색과 초록색을 좋아해.
+##############################
+# 문자 삽입
+aly = ["그냥", "좀", "졸리네"]
+
+aly.insert(0, "많이")  # 지정위치에 삽입
+print(aly)
+aly.append("ㅇㅇㅇㅇ")  # 뒤에 삽입
+print(aly)
+
+# 삭제
+print(aly.pop())  # 맨 뒤에 삭제
+print(aly)
+
+# 모두 지우기
+num_list.clear()
+print(num_list)
+
+# 찾기
+print(aly.index("그냥"))  # 위치찾기
+print(aly.count("그냥"))  # 요소 횟수
+#####################################
+# 정렬
+num_list = [5, 3, 6, 7, 1, 2]
+num_list.sort()  # 오름차순 정렬
+print(num_list)
+
+num_list.reverse()  # 순서 뒤집기
+print(num_list)
+############################
+list_mix1 = ["글자", 2, 5, "/"]
+list_mix2 = ['글자', 6, "*", True]
+print(list_mix2)
+
+
+# 리스트 확장
+list_mix2.extend(list_mix1)
+print(list_mix2)  # 출력:['글자', 6, '*', True, '글자', 2, 5, '/']
+##################################################
+# 사전 {} 중괄호!!! 키이름은 항상 달라야함
+
+sulab = {3: "3번서랍", 50: "50번서랍"}
+print(sulab[3])  # 대괄호
+print(sulab.get(50))  # .get() 이건 소괄호
+
+# 없는거 출력
+# print(sulab[5])  # 오류뜨고 멈춤
+print(sulab.get(5))  # None 출력됨, 오류없이 진행
+print(sulab.get(5, "사용가능"))  # ""적어놓으면 사용가능 출력됨
+###############################################
+
+#키 있는지 확인하기
+print(3 in sulab)  # True
+print(5 in sulab)  # Fals
+print("3번서랍" in sulab) #Fals 키만 찾음.
+
+#자료 수정
+print(sulab)
+sulab[3] = "내서랍" #내용물 수정
+sulab["니서랍"] = "니서랍" #키,내용물 추가
+print(sulab)
+
+# 딕셔너리 내용삭제
+del sulab[3]  # del 딕셔너리[키이름]
+print(sulab)  # 출력  {50:"50번서랍"}
+
+# key만 출력
+print(sulab.keys())
+# value만 출력
+print(sulab.values())
+# key, value 쌍으로 출력
+print(sulab.items())
+
+# 일괄삭제
+sulab.clear()
+print(sulab)    # {}  출력됨
+
+#############################
+# 튜플(괄호안에 쓴것)은 수정불가, 리스트보다 빠름
+'''menu = ("참치", "파라솔")
+print(menu[0])
+print(menu[1])
+
+##########################
+
+name = "frog"
+age = 2
+hobby = "수영"
+print(name, age, hobby)
+출력은 위 아래 동일함
+
+(nname, aage, hhobby) = ("rabbit", 5, "달리기")
+
+print(nname, aage, hhobby)
+########################
+# 집합(set) - {}중괄호,중복 안됨, 순서 없음
+my_s = {5, 4, 6, 8, 11, 2, 2}
+print(my_s)  # {2, 4, 5, 6, 8, 11} -중복숫자 제거되고 오름차순으로 출력됨
+################################
+
+duck = {"청둥오리", "집오리", "사실 거위"}
+in_sleep = set(["청둥오리", "사실 거위"])
+
+# 교집합    A&B   or  A.intersection(B)
+print(duck & in_sleep)
+print(duck.intersection(in_sleep))
+
+# 합집합     A|B  (|가 or을 뜻함)    A.union(B)
+print(duck | in_sleep)
+print(duck.union(in_sleep))
+
+# 차집합 (앞에꺼에서 뒤에걸 뺌) A-B     A.difference(B)
+print(duck - in_sleep)
+print(duck.difference(in_sleep))
+
+# 요소 추가 A.add(sumething)
+in_sleep.add("고니")
+print(in_sleep)
+
+# 요소제거
+duck.remove("사실 거위")
+print(duck)
+
+###################################
+# 자료구조의 변경 - 이름=구조(이름)
+
+bee = {"말벌", "장수말벌", "꿀벌"}  # {중괄호} set
+print(bee, type(bee))  # <class 'set'>
+
+bee = list(bee) # [대괄호] list
+print(bee, type(bee))  # <class 'list'>
+
+bee = tuple(bee) # (소괄호) tuple
+print(bee, type(bee))  # <class 'tuple'>
+
+bee = set(bee) 
+print(bee, type(bee))  # <class 'set'>
+
+# 출력
+# {'장수말벌', '말벌', '꿀벌'} <class 'set'> 
+# ['장수말벌', '말벌', '꿀벌'] <class 'list'>
+# ('장수말벌', '말벌', '꿀벌') <class 'tuple'>
+# {'장수말벌', '말벌', '꿀벌'} <class 'set'>
+
+#################################
+
+# while
+'''customers = "욘두"
+ind = 5
+while ind >= 1:  # while A:    -> A하는동안 작동
+    ind -= 1
+    print("{},커피가 준비 되었습니다. {}번 남았어요.".format(customers, ind))
+
+    if ind == 0:
+        print("커피는 폐기처분되었습니다.")'''
+
+
+'''# 무한루프
+visitor = "시리"
+index = 1
+while True:
+    print("{0}, 커피가 준비 되었습니다. 호출 {1}회.".format(visitor, index))
+    index += 1 
+    print(1터미널에 커서두고 ctrl  +  c누르면 종료'''
+
+
+'''# 조건만족
+customer = "로키"
+take = "unnown"
+while customer != take:
+    print("{0}, 커피가 준비 되었습니다.".format(customer))
+    take = input("이름이 어떻게 되세요? >")
+'''
+#####################
+'''#컨티뉴, 브레이크
+
+# 컨티뉴: 없는거 빼고 계속 진행
+nobook = [7]
+absent = [2, 5]  # 결석
+for student in range(1, 11):  # 1~20
+    if student in absent:
+        continue  # 윗줄에 조건같은거:   아랫줄에 continue 적기
+    elif student in nobook:
+        print("오늘수업 여기까지. {0}은 교무실로 와라".format(student))
+# 브레이크
+        break  # 종료, 끝냄
+    print("{0}, 책을 읽어라".format(student))
+'''
+#######################
+'''# 한줄로 끝내는 for문
+# 출석번호 1,2,3,4 -> 101,102,103,104
+student = [1, 2, 3, 4]
+print(student)
+
+student = [i+100 for i in student]  # i에 student넣음
+print(student)
+'''
+#############
+#함수
+def open_sesumi():  # 함수는 def로 시작해서 함수 이름 적고 :
+    print("새로운 계좌 생성되었습니다")  # 그 아래 함수 적기
+# 함수는 소환하기 전까지는 일 안함  소환해주면 프린트던 뭐던 실행함
+#반환은 return 으로
+##############
+#함수 기본값 설정
+def identiti(name, age, main_lang):
+    print("이름 : {0}\t나이{1}\t주 사용 언어: {2}"
+          .format(name, age, main_lang))    # 문장이 실질적으로 한 줄로 인식됨
+
+
+identiti("브루스", 26, "Rust")
+identiti("madhatter", 52, "Java")
+
+# 이름 : 브루스   나이26  주 사용 언어: Rust
+# 이름 : madhatter        나이52  주 사용 언어: Java이름 : madhatter        나이52  주 사용 언어: Java
+########################################
+#미리 함수에 공통사항을 입력해놔도 됨
+def identiti(name, age=15, main_lang="rust"):
+    print("이름 : {0}\t나이{1}\t주 사용 언어: {2}"
+          .format(name, age, main_lang))    # 문장이 실질적으로 한 줄로 인식됨
+
+
+identiti("Richerd")
+identiti('Timorhy')
+# 이름 : Richerd  나이15  주 사용 언어: rust
+# 이름 : Timorhy  나이15  주 사용 언어: rust
+##############################
