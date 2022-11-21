@@ -13,13 +13,17 @@ function handleToDoSubmit(event) {
 function paintToDO(newToDo) {
     const li =document.createElement("li");
     const span =document.createElement("span")
+    const button = document.createElement("button");
+      //버튼 만들기
+    button.innerText = "❌" //이모지는 윈도우 + 점.  
     li.appendChild(span);
+    li.appendChild(button); //삭제버튼 이모지 보이게 만들기
     span.innerText = newToDo;
-    console.log(li);
+    toDoList.appendChild(li); //부모 자식에 자식 노드를 추가하는 메서드
 }
 toDoForm.addEventListener("submit", handleToDoSubmit);
 
-
+//할일 추가함, 새로고침 누르면 할일 리스트 삭제됨
 
 //  html에서 가져오는 부분
 // <from id="todo-form">
