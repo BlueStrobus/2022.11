@@ -5,7 +5,7 @@ let toDos = [];
 const TODOS_KEY = "todos";
 const savedToDos = localStorage.getItem(TODOS_KEY); //Application ->Storage의 Local Storage
 if(savedToDos != null) {
-  const parsedToDos = JSON.parse(savedToDos); //함수는() parse는 배열임
+  const parsedToDos = JSON.parse(savedToDos); //parse가 함수를 JSON이 읽을 수 있는 배열로 만듦 //함수는() parse는 배열[]임
   toDos = parsedToDos; //새로고침해도 todo유지되게 만듦
   parsedToDos.forEach((item) => paintToDO(item)); //배열.위치(함수명)
   //배열 안의 각각의 요소(item)앞에 Hello 붙여서 출력
