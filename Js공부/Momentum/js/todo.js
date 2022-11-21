@@ -4,6 +4,9 @@ const toDoInput = toDoForm.querySelector("input");
 let toDos = [];
 const TODOS_KEY = "todos";
 const savedToDos = localStorage.getItem(TODOS_KEY); //Application ->Storage의 Local Storage
+
+//근데 ❌눌러서 지운 할일이 사라지지 않아요
+
 if(savedToDos != null) {
   const parsedToDos = JSON.parse(savedToDos); //parse가 함수를 JSON이 읽을 수 있는 배열로 만듦 //함수는() parse는 배열[]임
   toDos = parsedToDos; //새로고침해도 todo유지되게 만듦
@@ -60,24 +63,19 @@ toDoForm.addEventListener("submit", handleToDoSubmit);
 
 
 {/* <바디>
+        //createElement
+        //<li></li>   //const li =document.createElement("li");
+        //<spen></spen>   //const span =document.createElement("span")
+        //<button></button>   //const button = document.createElement("button");
 
-    //createElement
-    //<li></li>   //const li =document.createElement("li");
-    //<spen></spen>   //const span =document.createElement("span")
-    //<button></button>   //const button = document.createElement("button");
-
-    <ul id="todo-list">   //ul은 리스트 모음
+     <ul id="todo-list">   //ul은 리스트 모음
        <li> // toDoList.appendChild(li)  toDoList에 li(리스트)를 자식으로(?) 넣기
         <span></span> //li.appendChild(span);   li 리스트에 spen(할일 적은 텍스트)를 자식으로(?) 넣기
         <button></button> //li.appendChild(button); li 리스트에 button(❌)를 자식으로(?) 넣기
-
-       </li>
-    
-    
+       </li>        
       </ul>
+    </바디>  */}
 
 
 
 
-
-</바디>  */}
