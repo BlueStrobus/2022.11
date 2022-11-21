@@ -44,16 +44,29 @@
 // console.log(y)  //출력 : NaN
 
 
-//Boolean
+// //Boolean
 
-const a = true; //참
-const b = false; //거짓
+// const a = true; //참
+// const b = false; //거짓
 
-const name = "Mike";
-const age = 30; 
+// const name = "Mike";
+// const age = 30; 
 
-console.log(name == "Mike");
-console.log(age > 40);
+// console.log(name == "Mike");
+// console.log(age > 40);
 
-// true
-// false
+// // true
+// // false
+
+
+
+//null 과 undefined 
+
+//변수 선언만 하고 아무것도 할당 하지 않기
+
+let age;
+console.log(age)    //자동으로 undefined 출력
+
+
+let user = null; //변수에 ""없이 nill 주기
+console.log(user)  //null 출력
