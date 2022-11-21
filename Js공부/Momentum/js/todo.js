@@ -1,13 +1,13 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("input");
-const toDos = [];
+let toDos = [];
 const TODOS_KEY = "todos";
-const savedToDos = localStorage.getItem(TODOS_KEY);
+const savedToDos = localStorage.getItem(TODOS_KEY); //Application ->Storage의 Local Storage
 if(savedToDos != null) {
   const parsedToDos = JSON.parse(savedToDos); //함수는() parse는 배열임
-  console.log(parsedToDos);
-  parsedToDos.forEach((item) => console.log("Hello", item)); //배열.위치(함수명)
+  toDos = parsedToDos; //새로고침해도 todo유지되게 만듦
+  parsedToDos.forEach((item) => paintToDO(item)); //배열.위치(함수명)
   //배열 안의 각각의 요소(item)앞에 Hello 붙여서 출력
 }
 

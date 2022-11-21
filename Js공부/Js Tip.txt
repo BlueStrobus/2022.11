@@ -97,6 +97,8 @@ document.getElementById('X문서아이디X').    <-셀렉터라고 부름
 
 
 //자료형
+
+
 const name = "Mike";
  //문자형 String "" ''  `고정 ${변수}` 물결 아래에 있는 것
 const age = 30; //숫자형
@@ -110,6 +112,15 @@ console.log(myName);
 const message1 = `나는 ${30+1}살 입니다.`;
 console.log(message1);
     출력 : 나는 31살 입니다.
+
+const name = 'Mike';
+const a = "나는 ";
+const b = "입니다.";
+console.log(a + name + b);     //나는 Mike입니다.
+
+
+const age = 30 //number
+console.log(a + age + "살 " +b) //나는 30살 입니다.
 
 
 
@@ -170,7 +181,16 @@ let user = null; //변수에 ""없이 nill 주기
 console.log(user)  //null 출력
 
 
+//typeof 연산자 - 변수의 자료형 출력
 
+const name = 'Mike';
+
+console.log(typeof 3);  //  number  숫자형
+console.log(typeof name);  //  string   문자형
+console.log(typeof true);  //  boolean  볼룬...진실/거짓
+console.log(typeof "xxx");  //  string
+console.log(typeof null);  //  object   객체형(null != 객체)    
+console.log(typeof undefined);  //  undefined   정의되지않음
 
 ##############
 ##  JSON #####
