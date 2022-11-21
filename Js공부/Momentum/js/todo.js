@@ -1,13 +1,25 @@
 const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("input");
+const toDos = [];
+const TODOS_KEY = "todos";
+const savedToDos = localStorage.getItem(TODOS_KEY);
+if(savedToDos != null) {
+  const parsedToDos = JSON.parse[savedToDos];
+  console.log(parsedToDos);
+  parsedToDos.forEach(item) => console.log("Hello", item); //배열.위치(함수명)
+}
 
+function saveToDos() {
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+}
 
 function handleToDoSubmit(event) {
     event.preventDefault();
   //  console.log(toDoInput.value); //콘솔확인
     const newToDo = toDoInput.value;
-    toDoInput.value = ""
+    toDoInput.value = "";
+    toDos.push(newToDo); //문자열에 입력된 뉴투두를 투두스에 넣기   콘솔창에 toDos치고 엔터누르면 (3) ['1', '2', '3'] 나옴
     paintToDO(newToDo);
 } 
 function paintToDO(newToDo) {
@@ -30,6 +42,9 @@ function deleteToDo(event) {
   li.remove();
 }
 
+function saveToDos(event) {
+  localStorage.setItem["toDos", JSON.stringify(toDos)]; //제이슨 형태의 스트리밍으로 바꿔줌???
+}
 
 
 toDoForm.addEventListener("submit", handleToDoSubmit);

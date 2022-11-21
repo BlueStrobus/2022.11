@@ -168,3 +168,15 @@ console.log(age)    //자동으로 undefined 출력
 
 let user = null; //변수에 ""없이 nill 주기
 console.log(user)  //null 출력
+
+
+
+
+##############
+##  JSON #####
+##############
+제이슨 많이 사용함. 뭔지 알아내
+제이슨은 배열 안에 오브젝트 많이 들어있는 것
+
+JSON.Stringify()
+JSON.parse()
