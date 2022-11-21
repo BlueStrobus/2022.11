@@ -14,6 +14,7 @@ let a123 = "a";
 a123 = "A+";
 
 
+
 const   절대로 바뀌지 않는 상수 이용할 때 사용(다른 파일 에서 가져올 때 등)
 
 
@@ -92,3 +93,41 @@ html 바꾸기  document.getElementById('hello').innerHTML = '안녕';
 
 
 document.getElementById('X문서아이디X').    <-셀렉터라고 부름
+
+
+
+//자료형
+const name = "Mike";
+ //문자형 String "" ''  `고정 ${변수}` 물결 아래에 있는 것
+const age = 30; //정수형
+
+
+const myName = `My name is ${name}`; //달러랑 중괄호 사이에 변수
+
+console.log(myName);
+    출력: My name is Mike
+
+const message1 = `나는 ${30+1}살 입니다.`;
+console.log(message1);
+    출력 : 나는 31살 입니다.
+
+
+
+
+// 숫자형
+const age = 30; //숫자형 Number
+const Pi = 3.14;
+
+console.log(1 + 2); // 더하기
+console.log(10 - 3); //빼기
+console.log(3*2); //곱하기
+console.log(6 / 3); //나누기 소숫점까지 나옴
+console.log(7 % 2); //나머지 : 1의 자리까지 나누고 나머지
+console.log(7 / 2 ); //소숫점까지 나옴
+출력
+3
+7
+6
+2
+1
+3.5
