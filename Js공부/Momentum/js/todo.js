@@ -5,13 +5,10 @@ const toDos = [];
 const TODOS_KEY = "todos";
 const savedToDos = localStorage.getItem(TODOS_KEY);
 if(savedToDos != null) {
-  const parsedToDos = JSON.parse[savedToDos];
+  const parsedToDos = JSON.parse(savedToDos); //함수는() parse는 배열임
   console.log(parsedToDos);
-  parsedToDos.forEach(item) => console.log("Hello", item); //배열.위치(함수명)
-}
-
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+  parsedToDos.forEach((item) => console.log("Hello", item)); //배열.위치(함수명)
+  //배열 안의 각각의 요소(item)앞에 Hello 붙여서 출력
 }
 
 function handleToDoSubmit(event) {
@@ -21,6 +18,7 @@ function handleToDoSubmit(event) {
     toDoInput.value = "";
     toDos.push(newToDo); //문자열에 입력된 뉴투두를 투두스에 넣기   콘솔창에 toDos치고 엔터누르면 (3) ['1', '2', '3'] 나옴
     paintToDO(newToDo);
+    saveToDos();
 } 
 function paintToDO(newToDo) {
     const li =document.createElement("li");
@@ -42,8 +40,8 @@ function deleteToDo(event) {
   li.remove();
 }
 
-function saveToDos(event) {
-  localStorage.setItem["toDos", JSON.stringify(toDos)]; //제이슨 형태의 스트리밍으로 바꿔줌???
+function saveToDos() {
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos)); //제이슨 형태의 스트리밍으로 바꿔줌???
 }
 
 
