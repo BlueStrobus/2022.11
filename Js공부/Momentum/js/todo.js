@@ -1,7 +1,3 @@
-// 현상태-todo 입력이 안됨, 삭제유지안됨
-
-
-
 const toDoForm = document.getElementById("todo-form");
 const toDoList = document.getElementById("todo-list");
 const toDoInput = toDoForm.querySelector("input");
@@ -28,11 +24,11 @@ function handleToDoSubmit(event) {
     toDoInput.value = "";
     const newTodoObj = {
       text: newTodo,
-      id: Date.now(), //날짜 now  id를 현재 시간으로 주기-구분
+      id: Date.now(), //시간 now  id를 현재 시간으로 주기-구분
     }
     toDos.push(newTodoObj); //문자열에 입력된 뉴투두를 투두스에 넣기   콘솔창에 toDos치고 엔터누르면 (3) ['1', '2', '3'] 나옴
-    paintToDO(newTodoObj);
-    saveToDos();
+    paintToDo(newTodoObj); // newTodoObj 불러와서(paint) ToDo에 넣고
+    saveToDos(); //ToDos에 저장
 } 
 
 // X 버튼 누르면 삭제됨
