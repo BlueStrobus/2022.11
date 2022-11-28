@@ -1,12 +1,22 @@
-<!DOCTYPE html>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href="css/style.css">
+  <link rel = "stylesheet" href="css/style.css"> -->
   <title>Momentum</title>
+  <style>
+    body {
+      
+      background-image: url('3.jfif');  
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+  
 </head>
 <body>
   
@@ -16,7 +26,9 @@
         <!--입력창 만들기, 글자개수 15개로 제한-->
         <input type="submit" value="log in"/> <!--log in 버튼 -->
     </form> <!--여기까지 로그인폼-->
-    <h1 id="greeting" class="hidden"></h1>
+    <h1 id="greeting" class="hidden">
+      text-color: 'write'
+    </h1>
     <h2 id="clock" 00:00:00></h2>
     <form id="todo-form">
       <input type="text" placeholder="write a To Do and Prese Enter" required/> <!--인풋은 자동으로 닫힘, />으로 끝내기-->
@@ -32,15 +44,14 @@
       <span></span>
     </div>
 
-    
-    
 
-    
+
+    <!-- <script src="css/bg.css"></script> -->
     <script src="js/greeting.js"></script> <!--app2.js파일에서 가져오기-->
     <script src="js/clock.js"></script> <!-- 시계 -->
     <script src="js/quotes.js"></script> <!--파일명 임력부분에 커서 놓고 ctrl + space ->파일 이름 뜸-->
     <!-- <script src="js/background.js"></script> -->
-    <script src="js/bg.js"></script>
+
     <script src="js/todo.js"></script> <!-- 할일 -->
     <script src="js/weather.js"></script> <!-- 날씨 -->
 
